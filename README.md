@@ -48,7 +48,7 @@ flowchart LR
 ## 目录结构
 
 ```
-jiangling-ai-preaudit/
+preaudit-rag-engine/
 ├── README.md
 ├── requirements.txt
 ├── docker-compose.yml          # Redis + Ollama 一键起
