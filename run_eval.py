@@ -39,7 +39,7 @@ def main():
     with open(os.path.join(ROOT, "data", "eval_questions.json"), encoding="utf-8") as f:
         questions = json.load(f)
 
-    print("# 江陵政务 AI 预审 · RAG 评估与切片/重排对比\n")
+    print("# 某地政务 AI 预审 · RAG 评估与切片/重排对比\n")
     print(f"政策文档数：{len(docs)}（高血压 / 糖尿病 / 恶性肿瘤）｜测试问题数：{len(questions)}\n")
 
     results = {}

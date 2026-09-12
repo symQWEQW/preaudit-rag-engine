@@ -1,4 +1,4 @@
-"""江陵 AI 预审 · 交互 Demo（Gradio）。面试当场可玩。
+"""某地 AI 预审 · 交互 Demo（Gradio）。面试当场可玩。
 
 运行：python app.py  （需 pip install gradio）
 生成模块默认 mock；取消 generate(..., mock=False) 可接本地 Ollama qwen2.5:7b。
@@ -55,7 +55,7 @@ if __name__ == "__main__":
                              placeholder="如：高血压的认定标准里收缩压要达到多少？"),
             outputs=[gr.Textbox(label="AI 预审结论（mock 生成）"),
                      gr.Textbox(label="召回来源 Top3")],
-            title="江陵政务 AI 预审 Demo",
+            title="某地政务 AI 预审 Demo",
             description="本地 RAG 检索 + 重排序演示（生成模块默认 mock，可接 Ollama qwen2.5:7b）",
         )
         demo.launch()
