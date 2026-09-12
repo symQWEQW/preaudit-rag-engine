@@ -1,0 +1,36 @@
+version: "3.8"
+
+services:
+  redis:
+    image: redis:7-alpine
+    ports:
+      - "6379:6379"
+
+  ollama:
+    image: ollama/ollama
+    ports:
+      - "11434:11434"
+    volumes:
+      - ollama_data:/root/.ollama
+    # 首次使用需拉取模型：docker exec -it <container> ollama pull qwen2.5:7b
+
+  # 生产向量库（资源占用较大，本地演示可省略，rag_core 用 TfidfIndex 兜底）
+  # milvus-etcd:
+  #   image: quay.io/coreos/etcd:latest
+  # milvus-minio:
+  #   image: minio/minio
+  # milvus-standalone:
+  #   image: milvusdb/milvus:latest
+  #   ports: ["19530:19530"]
+
+  ai-core:
+    build: .
+    command: python app.py
+    ports:
+      - "7860:7860"
+    depends_on:
+      - redis
+      - ollama
+
+volumes:
+  ollama_data:

@@ -1,0 +1,4 @@
+# 核心评估/检索：零依赖，标准库即可运行 run_eval.py
+gradio>=4.0            # 仅 app.py 交互 demo 需要
+sentence-transformers>=2.2  # 可选：替换 TF-IDF 为真实 embedding 检索（bge-m3 等）
+faiss-cpu>=1.7         # 可选：向量索引加速
