@@ -26,6 +26,17 @@
 - 💬 **交互 Demo**（`app.py`，Gradio）：面试当场可玩
 - 🐳 **容器编排**（`docker-compose.yml`）：Redis + Ollama 一键起
 
+
+## 流水线总览
+
+![RAG 流水线](docs/images/rag-pipeline.png)
+
+## 切片粒度实验（实测数据）
+
+![切片粒度对比](docs/images/rag-chunk-eval.png)
+
+> 详细数字与分析见 [docs/experiments.md](docs/experiments.md)
+
 ## 架构图
 
 ```mermaid
