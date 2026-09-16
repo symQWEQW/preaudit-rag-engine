@@ -39,7 +39,10 @@
 
 ## 架构图
 
-```mermaid
+![技术架构图](docs/images/arch.png)
+
+<details>
+<summary>文本版（Mermaid）</summary>
 flowchart LR
     患者H5[患者 H5] -->|填报| GW[Spring Cloud Gateway]
     GW -->|路由/鉴权/限流| AI[ai-engine-service\nRAG 核心]
@@ -53,6 +56,8 @@ flowchart LR
     RT -.生产.-> MV[(Milvus 19530)]
     BUS --> RD[(Redis 6379)]
 ```
+
+</details>
 
 > 本仓库 `rag_core/` 即 `ai-engine-service` 的 RAG 核心；本地演示用 `TfidfIndex` 兜底，生产环境将检索替换为 Milvus，接口一致。
 
