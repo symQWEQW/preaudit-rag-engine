@@ -96,6 +96,12 @@ pip install gradio
 python app.py        # 浏览器打开 http://localhost:7860
 ```
 
+### Demo 实况（真实运行截图）
+
+输入「高血压慢特病认定需要哪些材料？」的实际运行效果——右侧为 RAG 检索 → 重排 → 生成链路输出，下方为真实召回 Top3 与相关度分数：
+
+![Gradio Demo 实况](docs/images/gradio-demo.png)
+
 ## 核心实验结论（真实数字）
 
 数据集：5 篇模拟政策文档 + 15 道测试题。
