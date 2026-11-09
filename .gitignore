@@ -1,4 +1,4 @@
-# ---- Python ----
+﻿# ---- Python ----
 __pycache__/
 *.py[cod]
 *$py.class
@@ -39,3 +39,6 @@ data/*_real/
 *_real/
 data/cache/
 *.log
+
+# ---- 本地语料源路径（含真实地名/客户名，绝不入仓）----
+corpus_sources.json
